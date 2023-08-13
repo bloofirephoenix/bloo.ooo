@@ -1,0 +1,99 @@
+@import url("https://use.typekit.net/yty0iks.css");
+
+
+body {
+    background-color: #1a1b26;
+    color: #c0caf5;
+    font-size: 15px;
+
+    font-family: "puffin-display-soft", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: clamp(50px, 10vw, 100px);
+    padding: 0px;
+    margin: 0px;
+    font-family: "puffin-arcade-chrome", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 1px dotted gray;
+    color: #bb9af7;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ff757f;
+}
+
+h2 {
+    font-size: 35px;
+    color: #e0af68;
+}
+
+h3 {
+    font-size: 30px;
+    color: #9ece6a;
+}
+
+h4 {
+    font-size: 25px;
+    color: #7dcfff;
+}
+
+h5 {
+    font-size: 20px;
+    color: #7aa2f7;
+}
+
+h6 {
+    font-size: 15px;
+    color: #bb94f0;
+}
+
+nav {
+    text-align: center;
+}
+
+a {
+    color: #ffd6ff
+}
+
+.current-link {
+    color: #c8b6ff
+}
+
+.ventfish {
+    display: block;
+    margin-left: auto;
+    width: 100px;
+    height: auto;
+}
+
+.rainbow {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}

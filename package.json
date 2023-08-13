@@ -1,0 +1,24 @@
+{
+  "name": "bloo.ooo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bloofirephoenix/bloo.ooo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bloofirephoenix/bloo.ooo/issues"
+  },
+  "homepage": "https://github.com/bloofirephoenix/bloo.ooo",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

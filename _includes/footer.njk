@@ -1,0 +1,8 @@
+<nav>
+    {% for item in footer %}
+        <a href="{{ item.link }}">{{ item.name }}</a>
+        {% if not loop.last %}
+            |
+        {% endif %}
+    {% endfor %}
+</nav>

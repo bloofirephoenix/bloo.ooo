@@ -1,0 +1,27 @@
+---
+header: blue
+---
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <h1 class="rainbow title">{{header}}firephoenix</h1>
+        {% include "nav.njk" %}
+        <hr>
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+    <img src="/images/ventfish.png" class="ventfish">
+    <hr>
+    <footer>
+        {% include "footer.njk" %}
+    </footer>
+</body>
