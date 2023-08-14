@@ -35,7 +35,7 @@ body {
 .title {
     color: white;
     text-align: center;
-    font-size: clamp(50px, 10vw, 100px);
+    font-size: clamp(0px, 10vw, 100px);
     padding: 0px;
     margin: 0px;
     font-family: "puffin-arcade-chrome", sans-serif;
@@ -47,6 +47,11 @@ body {
     text-align: center;
     font-size: 40px;
     color: #bb9af7;
+}
+
+mark {
+    color: #ffd6ff;
+    background-color: transparent;
 }
 
 main {
@@ -124,4 +129,14 @@ a {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+main hr {
+    color: #292e42;
+}
+
+hr {
+    color: #292e42;
+    border-width: 1px;
+    border-style: solid;
 }
