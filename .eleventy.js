@@ -1,9 +1,17 @@
+const { DateTime } = require('luxon');
+
 module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget('public');
 
     eleventyConfig.addPassthroughCopy({
 		"./public/": "/"
 	});
+
+    eleventyConfig.addFilter('readableDate', (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
+            'dd LLLL yyyy'
+        ).toLocaleLowerCase();
+    });
 
     return {
         dir: {

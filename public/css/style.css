@@ -1,5 +1,26 @@
 @import url("https://use.typekit.net/yty0iks.css");
 
+time {
+    color:#857dbc;
+    font-size: 12px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10 px;
+}
+
+.card {
+    padding: 0px;
+    margin: 0px;
+}
+
+.card h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+}
 
 body {
     background-color: #1a1b26;
@@ -25,8 +46,27 @@ body {
 .heading {
     text-align: center;
     font-size: 40px;
-    border-bottom: 1px dotted gray;
     color: #bb9af7;
+}
+
+main {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.normal {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 h1 {
