@@ -20,5 +20,9 @@
   "homepage": "https://github.com/bloofirephoenix/bloo.ooo",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "highlight.js": "^11.8.0",
+    "markdown-it-mark": "^3.0.1"
   }
 }

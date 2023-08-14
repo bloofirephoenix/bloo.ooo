@@ -141,3 +141,19 @@ hr {
     border-width: 1px;
     border-style: solid;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #24283b;
+}
+
+table th, table td {
+    border: 1px solid #4d5781;
+    padding-inline: 10px;
+    padding-block: 3px;
+}
+
+table tr:nth-child(even){background-color: #24283b;}
