@@ -52,6 +52,7 @@ body {
 mark {
     color: #ffd6ff;
     background-color: transparent;
+    word-wrap:break-word;
 }
 
 main {
