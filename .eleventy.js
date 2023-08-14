@@ -4,7 +4,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addWatchTarget('public');
 
     eleventyConfig.addPassthroughCopy({
-		"./public/": "/"
+		"./public/": "/",
+        "./favicon/": "/"
 	});
 
     eleventyConfig.addFilter('readableDate', (dateObj) => {
