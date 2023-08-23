@@ -4,6 +4,10 @@
         "link": "/"
     },
     {
+        "name": "blog",
+        "link": "/blog/"
+    },
+    {
         "name": "photo",
         "link": "/photo/"
     },
