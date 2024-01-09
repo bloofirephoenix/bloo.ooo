@@ -1,4 +1,11 @@
-<div class="heading">{{ title }}</div>
+<div class="heading">
+    <h1>{{ title }}</h1>
+    <time datetime="{{ date }}">{{ date | readableDate }}</time>
+    {% if updated != null %}
+        <time datetime="{{ updated }}">(updated {{ updated | readableDate }})</time>
+    {% endif %}
+</div>
+
 <hr>
 <div class="content">
     {{ content | safe }}

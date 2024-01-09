@@ -4,7 +4,7 @@
             <h1><a href={{ series.url }}>{{series.data.title}}</a></h1>
             <time datetime="{{ series.data.date }}">{{ series.data.date | readableDate }}</time>
             {% if series.data.updated != null %}
-                <time datetime="{{ series.data.updated }}">- updated {{ series.data.updated | readableDate }}</time>
+                <time datetime="{{ series.data.updated }}">(updated {{ series.data.updated | readableDate }})</time>
             {% endif %}
             
             <br>

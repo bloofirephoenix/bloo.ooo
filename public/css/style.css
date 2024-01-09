@@ -45,8 +45,14 @@ body {
 
 .heading {
     text-align: center;
+}
+
+.heading h1 {
+    text-align: center;
     font-size: 40px;
     color: #bb9af7;
+    padding: 0px;
+    margin: 0px;
 }
 
 mark {
@@ -126,11 +132,17 @@ a {
 }
 
 .rainbow {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-    width: 100%;
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff) 0 0/200% 100%;
+    width: 200%;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    animation: a 2s linear infinite;
+}
+
+@keyframes a {
+    to {background-position: -200% 0%}
+
 }
 
 main hr {

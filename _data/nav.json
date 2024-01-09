@@ -4,12 +4,12 @@
         "link": "/"
     },
     {
-        "name": "blog",
-        "link": "/blog/"
-    },
-    {
         "name": "photo",
         "link": "/photo/"
+    },
+    {
+        "name": "notes",
+        "link": "/notes/"
     },
     {
         "name": "contact",
