@@ -3,7 +3,6 @@ layout: layouts/photo_post.njk
 title: attempts at infared trichromes
 description: silly tree is secretly orange
 date: 2023-11-11
-updated: 2024-01-08
 tags: photos
 ---
 
