@@ -82,40 +82,47 @@ main img {
     margin-right: 0px;
 }
 
+
 h1 {
     font-size: 45px;
     color: #ff757f;
     font-family: "puffin-arcade-regular";
+    margin: 0px;
 }
 
 h2 {
     font-size: 40px;
     color: #e0af68;
     font-family: "puffin-arcade-regular";
+    margin: 0px;
 }
 
 h3 {
     font-size: 35px;
     color: #9ece6a;
     font-family: "puffin-arcade-regular";
+    margin: 0px;
 }
 
 h4 {
     font-size: 30px;
     color: #7dcfff;
     font-family: "puffin-arcade-regular";
+    margin: 0px;
 }
 
 h5 {
     font-size: 25px;
     color: #7aa2f7;
     font-family: "puffin-arcade-regular";
+    margin: 0px;
 }
 
 h6 {
     font-size: 20px;
     color: #bb94f0;
     font-family: "puffin-arcade-regular";
+    margin: 0px;
 }
 
 nav {
