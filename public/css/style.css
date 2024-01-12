@@ -19,13 +19,13 @@ time {
 .card h1 {
     padding: 0px;
     margin: 0px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 body {
     background-color: black;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
 
     font-family: "puffin-display-soft", sans-serif;
     font-weight: 500;
@@ -48,8 +48,8 @@ body {
 }
 
 .heading h1 {
-    text-align: center;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: "puffin-arcade-regular";
     color: #bb9af7;
     padding: 0px;
     margin: 0px;
@@ -83,37 +83,45 @@ main img {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 45px;
     color: #ff757f;
+    font-family: "puffin-arcade-regular";
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 40px;
     color: #e0af68;
+    font-family: "puffin-arcade-regular";
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 35px;
     color: #9ece6a;
+    font-family: "puffin-arcade-regular";
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 30px;
     color: #7dcfff;
+    font-family: "puffin-arcade-regular";
 }
 
 h5 {
-    font-size: 20px;
+    font-size: 25px;
     color: #7aa2f7;
+    font-family: "puffin-arcade-regular";
 }
 
 h6 {
-    font-size: 15px;
+    font-size: 20px;
     color: #bb94f0;
+    font-family: "puffin-arcade-regular";
 }
 
 nav {
     text-align: center;
+    font-family: "puffin-arcade-regular";
+    font-size: 20px;
 }
 
 a {
