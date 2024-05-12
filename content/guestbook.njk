@@ -1,0 +1,109 @@
+---
+layout: layouts/base.njk
+header: Guest
+---
+
+<section>
+    <h1 class="centered">Guest Book</h1>
+    <form id="form" onsubmit="runCode(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name"><br>
+        <label for="message">Message:</label><br>
+        <textarea rows="4" cols="50" name="message"></textarea><br>
+        <input id="submit" type="submit" value="Submit">
+    </form>
+</section>
+
+<div id="messages">
+</div>
+
+<section>
+    <nav>
+        <a id="pageDown"><</a> <span id="currentPage"></span> <a id="pageUp">></a>
+    </nav>
+</section>
+
+<script>
+    async function runCode(e) {
+        let submit = document.getElementById("submit");
+        submit.disabled = true;
+        
+        e.preventDefault();
+        
+        let data = new FormData(e.target);
+        let name = data.get("name");
+        let message = data.get("message");
+
+        await fetch("https://api.bluefirephoenix.net/guestbook", {
+            method: "POST", 
+            body: JSON.stringify({
+                Name: name,
+                Message: message
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        location.reload();
+    }
+
+    async function loadGuestBook() {
+        let submit = document.getElementById("submit");
+        submit.disabled = true;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        let page = Number(urlParams.get('page'));
+        if (page == null) {
+            page = 0
+        }
+
+        let response = await fetch(`https://api.bluefirephoenix.net/guestbook?page=${page}&pageSize=20`);
+        if (response.ok) {
+            submit.disabled = false;
+        }
+        let data = await response.json();
+        for (i in data.messages) {
+            let options
+            let message = data.messages[i];
+            
+            let date = new Date(Date.parse(message.date));
+
+            let target = document.getElementById("messages");
+
+            target.innerHTML += `
+                <section>
+                    <h1 id="h ${message.id}"></h1>
+                    <time datetime="${message.date}">${date.toLocaleString()}</time>
+                    <p id="p ${message.id}"></p>
+                </section>
+            `;
+
+            let header = document.getElementById("h " + message.id);
+            header.innerText += message.name;
+
+            let text = document.getElementById("p " + message.id);
+            text.innerText += message.text;
+        }
+
+        // pages
+
+        let currentPage = document.getElementById("currentPage");
+        let pageDown = document.getElementById("pageDown");
+        let pageUp = document.getElementById("pageUp");
+
+        pageUp.href = `?page=${page + 1}`
+        pageDown.href = `?page=${page - 1}`
+
+        currentPage.innerText = page + 1
+
+        if (page == 0) {
+            pageDown.parentNode.removeChild(pageDown);
+        }
+        if (page == data.maxPage) {
+            pageUp.parentNode.removeChild(pageUp);
+        }
+    }
+
+    loadGuestBook()
+</script>

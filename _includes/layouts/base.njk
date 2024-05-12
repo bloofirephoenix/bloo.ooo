@@ -1,28 +1,44 @@
 ---
-header: blue
+header: Blue
 ---
 
-
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
-    <title>{% if title != null %} {{ title }} {% else %} {{ header }}firephoenix {%endif%} </title>
-</head>
-<body>
-    <header>
-        <h1 class="title"><span class="rainbow">{{header}}firephoenix</span></h1>
-        {% include "nav.njk" %}
-        <hr>
-    </header>
-    <main>
-        {{ content | safe }}
-    </main>
-    <hr>
-    <footer>
-        {% include "footer.njk" %}
-        <img src="/images/ventfish.png" class="ventfish">
-    </footer>
-</body>
+<html lang="en" data-theme="seaside_night">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="/css/index.css"/>
+		<link rel="stylesheet" href="/css/themes.css"/>
+		<script src="/js/themes.js">
+		<title>{% if title != null %} {{ title }} {% else %} {{ header }}FirePhoenix {%endif%} </title>
+	</head>
+	<body>
+		<header>
+			<h1 class="main_header">{{header}}FirePhoenix</h1>
+		</header>
+		<nav>
+			<section>
+				{% for item in nav %}
+					<a href="{{ item.link }}" {% if page.url == item.link%} class="current-link" {% endif %}>{{ item.name }}</a>
+					{% if not loop.last %}
+						|
+					{% endif %}
+				{% endfor %}
+			</section>
+		</nav>
+		<main>
+			{{ content | safe }}
+		</main>
+		<footer>
+			<section>
+				{% for item in footer %}
+					<a href="{{ item.link }}">{{ item.name }}</a>
+					{% if not loop.last %}
+						|
+					{% endif %}
+				{% endfor %}
+			</section>
+		</footer>
+		<script src="/oneko.js"></script>
+	</body>
+</html>

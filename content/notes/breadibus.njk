@@ -1,0 +1,235 @@
+---
+layout: layouts/note.njk
+date: 2024-05-12
+title: The Breadibus Breadboard Computer
+description: That time I built a computer out of logic gates.
+---
+
+<section>
+    <img src="/img/notes/breadibus/finished.webp" alt="A photo of a breadboard computer. The board is covered in different colored wires.">
+
+    <p>
+        This funny thing happens at the end of your junior year at my school. Your humanities teacher pulls you aside and says 
+        "If you want to graduate, you're going to need to spend your entire senior year making <em>something</em>."
+    </p>
+    <p>
+        You spend the next month or so deciding what exactly you're going to do and writing a proposal. 
+        Then it's summer, and you forget any of this ever happened until you sit down in the first class 
+        of your senior year and the teacher says, "So let's just go around and say what our projects are." <i>Oh no.</i>
+    </p>
+    <p>
+        Suddenly your once reasonable and perfectly doable project plan becomes incredibly daunting and ambitious.
+        <i>Past me wants me to do what now? Build a computer? Out of logic gates?</i>
+    </p>
+    <p>
+        Nevertheless, you push on. I, in my infinite wisdom, wrote in my proposal that I would build a computer out of 
+        logic gates and wires on breadboards, similar to 
+        <a href="https://www.youtube.com/playlist?list=PLowKtXNTBypGqImE405J2565dvjafglHU">Ben Eater's</a> and 
+        <a href="https://www.youtube.com/watch?v=vaGZapAGvwM">jdh's</a>.
+    </p>
+</section>
+
+<section>
+    <h1>But What Does It Do?</h1>
+    <p>
+        I get asked this question a lot. The short answer is: not much. It has 64kb of memory and storage, 
+        no way to give it any input, and can only output a single number at a time. It can add and subtract any number 
+        between zero and 255 and is capable of basic conditional operations (like if this number is zero, output 12). 
+        Essentially, it is theoretically capable of any mathematical operation, but good luck calculating what 255+1 is (it's zero, obviously).
+    </p>
+    <p>
+        This is the part where you look at me all weird. 
+        "Now why would you build a computer so utterly useless?" you ask. It's simple: because it's cool. 
+        What makes this computer special isn't what it does (or more likely, doesn't), it's what this computer is made of: logic gates. 
+        This computer is only a few steps removed from being made out of transistors. My engineer friends look at it and go, 
+        "You probably did more building that then I had to do to get my degree." <i>In that case I'll take my degree now.</i>
+    </p>
+    <p>
+        Within this computer is the basic stuff that goes into all of our electronics. Somewhere in your microwave is a little tiny (and much more powerful) breadboard computer. 
+    </p>
+</section>
+
+<section>
+    <h1>How It's Made</h1>
+
+    <img width="500px" src="/img/notes/breadibus/start.webp" alt="A photo of a powered yellow light in a breadboard.">
+    <p class="caption">The first wires of the computer. It's just a light.</p>
+
+    <p>
+        On September 19th, 2023, I laid the first wires of my computer. I had originally planned to build the entire thing in my 
+        computer using a program called Logism before building the physical computer, but I pretty quickly decided, for efficiency, 
+        to combine the two steps, and build the parts I've designed while designing the next parts. This quickly devolved into me just 
+        ordering the parts I thought I needed, and placing them on the board without designing anything first. To this day, I have virtually 
+        no diagrams of the wiring for this reason, and that's only caused me pain a handful of times.
+    </p>
+    <p>
+        I decided to start with the clock module. Most modules of the computer rely on the clock in some way. The light blinks, and the various modules do 
+        things to the timing of the blinking. I purchased Ben Eater's clock module, as this <i>✨electrical engineering✨</i> stuff is way above my pay grade, 
+        even now at the time of writing this.
+    </p>
+
+    <img width="500px" src="/img/notes/breadibus/clock.webp" alt="A photo of a breadboard with wires connecting between chips. There are three yellow lights.">
+    <p class="caption">The completed clock circuit on October 3, 2023.</p>
+
+    <p>
+        Next up were the registers. The computer was originally only supposed to have two of them (I later added two more). 
+        You can think of a register as holding a number you are currently doing things with. 
+        Memory also holds numbers, but they aren't at your fingertips like numbers in registers are.
+    </p>
+
+    <img width="500px" src="/img/notes/breadibus/sandwich.webp" alt="A photo of four breadboards covered in wire. They are loosely connected with wire.">
+    <p class="caption">November 7, 2023. The clock is to the left. Two registers sandwich a makeshift bus.</p>
+
+    <p>
+        Work continued at a steady pace. By the end of November, I had physically connected the boards together, 
+        rewired everything to use spools of wire instead of jumper cables, and had started work on the arithmetic logic unit (also known as the ALU. It does math). 
+        In early December I had started the memory, which I would later put off finishing until early May.
+    </p>
+
+    <img width="500px" src="/img/notes/breadibus/shape.webp" alt="A photo of the computer. It's taking shape. The wires look less messy.">
+    <p class="caption">January 3, 2024</p>
+
+    <p>
+        This is where I stalled out for a while. It turns out taking on an ambitious photography project, peer reviewing theses, 
+        and finishing your own thesis doesn't leave a lot of room for wiring.
+    </p>
+    <p>
+        My next major update isn't until March, when I finally finished the registers and stack pointer. 
+        Then spring came and went, and I, along with many other seniors, realized we were running out of time.
+    </p>
+
+    <p>
+        Suddenly I was spending every moment I could wiring. I would go in early and wire before class, 
+        wire during study halls, and wire during lunch. My life revolved around wiring. 
+        In total I was logging around 10 hours per week wiring for about a month.
+    </p>
+    <p>
+        At the same time, I was spending a considerable amount of time at home writing software for the computer. 
+        After all, you need a way to program it. Over the course of 10 days (and nights), I wrote BreadLang, the programming language for the computer.
+    </p>
+    <p>
+        When I closed my eyes, I would see wires. I couldn't sleep because I was thinking about all the wires I had left to place, 
+        and if I would finish on time. When I did sleep, I dreamed of the computer. One night, I dreamed I turned on the computer 
+        and discovered an error. I then debugged and fixed the error in my sleep.
+    </p>
+
+    <img width="500px" src="/img/notes/breadibus/finale.webp" alt="A photo of the computer. The bottom shows the beginnings of a new module. The rest of the computer is covered in wire.">
+    <p class="caption">April 9, 2024. Starting work on the final module of the computer: the brain.</p>
+
+    <p>
+        The brain was the hardest part of the computer. Its job is to connect every part of the computer together. 
+        It has to orchestrate the computer actually doing things by sending various signals to each module. 
+        It takes 18 different signals as input and converts it into 32 different control signals that go all throughout the computer. 
+        I wrote a program that could be put across four chips to handle this. 
+        I had no real way to test the program on my desktop, since I didn't have a full simulator like junior year me said I would. 
+        Instead I looked over each section of the code three times for errors, and I caught the majority of errors this way. Keyword: <em>majority</em>.
+    </p>
+
+    <p>
+        The rest of the errors would be caught one by one as I attempted to get the computer working. 
+        This became more and more upsetting, as each time I would have to reprogram the chips, which took about four hours. 
+        I would turn the computer on, run my test program, and it would get just slightly further than last time. 
+        Then I would have to fix the program, rip the four chips out of the computer (they are the hardest chips to remove on the computer), 
+        and spend the next four hours reprogramming them with a fix.
+    </p>
+    <p>
+        With all this downtime between attempts, I would try to fix other errors in the wiring. 
+        Namely, an error where one of my counting chips would count twice when it was only supposed to count once. 
+        I had tried everything, <em>everything</em> that I could think of. 
+        I was so desperate I started asking my friend who is more knowledgeable with electricity than me for help, 
+        and he said "Classic electrical engineering problems. Can't help you". <i>W-Why not?</i>
+    </p>
+    <p>
+        I spent a week just trying stuff to no avail. Finally, in my desperation, I turned to Reddit.
+    </p>
+    <p>
+        <a href="https://www.reddit.com/r/beneater/">There is a subreddit dedicated to making these sorts of computers</a>, 
+        where people who are like me ask questions and people who are smart give answers. 
+        And let me tell you, some of those people are too smart for their own good. 
+        One user, going only off my very in-depth explanation of the wrong component, was able to identify the problem and offer a fix. 
+        It's quite technical, but essentially the count signals were fluctuating for a handful of nanoseconds (billionths of a second) 
+        and it was causing the counters to count twice. This marked a rare Reddit win. At least in my book.
+    </p>
+    <p>
+        After this fix, it was a game of getting those four chips programmed correctly. After three long days of programming and reprogramming, it finally happened.
+    </p>
+
+    <video width="500px" controls muted alt="A video of the computer working. It zooms out slowly from the output to the full computer.">
+            <source  src="/img/notes/breadibus/done.mp4" type="video/mp4">
+            Your browser does not support this video.
+    </video>
+    <p class="caption">May 5, 2024. The finished computer computing the fibonacci sequence.</p>
+
+    <p>
+        <i>It... works? Weird.</i> It feels surreal to be finished with it. I've spent eight months working on this, and a year imagining it, and now it's done.
+    </p>
+    <p>
+        It's surprising just how precise computers really are. If you remove just a single wire, the computer breaks. 
+        If a count signal turns on when it's not supposed to for just a few nanoseconds, the computer breaks.
+        If this is how precise my computer has to be, imagine the precision of an actual computer.
+    </p>
+    <p>
+        When I turn it on, and the lights blink, it's like magic. Knowing how it's built and the purpose of every little wire and chip only adds to the magic.
+    </p>
+</section>
+<section>
+    <h1>Dear Future Breadboard Computer Builder</h1>
+    <p>
+        Building a computer like this is a balancing act between low-levelness and functionality. 
+        Sure, you could build a computer purely out of transistors, but will it do anything? Or you could go one step up, 
+        as I have, and build it out of 74 series logic chips, sacrificing a little purity for functionality. 
+    </p>
+    <p>
+        I will keep this brief so as to not repeat what you will hear so many times in your future (and not bore those of us who aren't planning a build but are reading this anyways).
+    <p>
+    <p>
+        My advice is:
+        <ol>
+            <li>
+                Watch all of (or most of) Ben Eater's 8-bit breadboard computer build series. <a href="https://www.reddit.com/r/beneater/">r/beneater</a> 
+                is also a great resource for finding advice and help.
+            </li>
+            <li>
+                Keep your friends close, and keep your data sheets closer.
+            </li>
+            <li>
+                Decide how low level you want to go. Do you want to use purely logic gates, or are you content with using register chips? 
+                Do you want to wire your own ALU or are you content with an ALU chip? Do you want to use a 6502 CPU and wire the surrounding circuitry?
+            </li>
+            <li>
+                Know what you're getting yourself into. Building a breadboard computer is a long and expensive endeavor. 
+                If you're not prepared to take that on, this might not be the right project for you.
+            </li>
+        </ol>
+    </p>
+    <p>
+        When I first imagined this project, I asked one of my friends who work in programming if it was possible.
+    </p>
+    <p>
+        "You're crazy," he said. Feeling dejected, I turned to another friend with a similar background,
+        <br>
+        "It'll be hard, but I think you can do it," he said. That was all that I needed.
+    </p>
+    <p>
+        I was probably going to build the computer regardless of what they said. 
+        Despite me having never written a word of assembly, having no idea how computers actually work, 
+        having never wired a simple LED, and having never made a programming language.
+    </p>
+    <p>
+        My lack of experience didn't matter to me. In the words of my friends, I was "crazy enough to do it." 
+        When describing why I built a darkroom in my attic, my mother said "When he's into something, he's goes all in." Perhaps I have a bit of an obsessive personality.
+    </p>
+    <p>
+        The difference between us normal people and a child prodigy is time and dedication. 
+        I didn't come out of the womb programming, I nurtured the skill over many years. 
+        <a href="https://www.youtube.com/watch?v=MJDtQTTAogk">PewDiePie dedicated himself to drawing for 100 days and made monumental progress</a>. 
+        Every pianist has a moment where they sit down to play hot crossed buns and think "this is hard". 
+        I'm getting ahead of myself aren't I.
+    </p>
+    <p>
+        My point is: you are capable of great things. We all are. You just need to keep putting one foot in front of the other.
+    </p>
+    <p>
+        Until next time~
+    </p>
+</section>

@@ -1,6 +1,7 @@
 ---
-layout: layouts/base.njk
-header: notes
+layout: layouts/post.njk
+header: Note
+tags: note
 ---
 
-{% include "post.njk" %}
+{{ content | safe }}

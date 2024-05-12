@@ -1,24 +1,52 @@
 ---
 layout: layouts/base.njk
+header: Blue
 ---
+<section>
+	<h1>You've come a long way to get here.</h1>
+	<p>
+		The floor creaks as you step inside the 
+		<select id="location" onchange="select_location();">
+			<option value="seaside">seaside</option>
+			<option value="snowy">snowy</option>
+			<option value="rustic">rustic</option>
+		</select> cabin.
+		Through a window you catch a glimpse of the
+		<select id="weather" onchange="select_weather();">
+			<option value="night">the starry night</option>
+			<option value="sky">the clear sky</option>
+			<option value="rain">the soft rain</option>
+		</select>.
+		The smell of the roaring fireplace fills the room.
+		A yellow parrot softly sleeps atop an arm chair. You take a seat and close your eyes.
+	</p>
+	<p>You think you'll stay here awhile.</p>
+</section>
 
-<div class="content">
-    <img src="/images/bluboat.png" class="bluboat normal">
-    <p> 
-        hello i am bloo.<br>
-        i take photos and do a lil coding<br>
-        sometimes i make videos
-    </p>
-</div>
+<section>
+	<img class="side" src="img/me.png"/>
+	<h1>Hi! I'm Bloo</h1>
+	<h2>Basics</h2>
+	<ul style="list-style:none;">
+		<li>
+			<strong>Name:</strong> Bloo
+		</li>
+		<li>
+			<strong>Pronouns:</strong> he/him
+		</li>
+		<li>
+			<strong>Likes:</strong> programming, photography, music, birds
+		</li>
+		<li>
+			<strong>Dislikes:</strong> drawing, wearing white pants, waking up early, dogs
+		</li>
+	</ul>
+</section>
 
-<style>
-    p {
-        padding-left: 20px;
-    }
-
-    .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
+<script>
+	let theme = localStorage.getItem('theme');
+	let l = document.getElementById("location");
+    let w = document.getElementById("weather");
+    l.value = theme.split("_")[0];
+    w.value = theme.split("_")[1];
+</script>

@@ -1,26 +1,29 @@
 ---
 layout: layouts/base.njk
-header: notes
+header: Note
 ---
 
-{% set collection = collections.note %}
-<div class="cards">
-    {% for series in collection | reverse %}
+<section>
+    <h1 class="centered">Notes</h1>
+    A place with all of my strange thoughts
+</section>
+
+<section>
+    {% for series in collections.note | reverse %}
         <div class="card">
             {% if series.data.title != null %}
                 <h1><a href={{ series.url }}>{{series.data.title}}</a></h1>
                 <time datetime="{{ series.data.date }}">{{ series.data.date | readableDate }}</time>
             {% else %}
                 <a href={{ series.url }}>{{ series.data.date | readableDate }}</a>
-                <br>
             {% endif %}
             
             {% if series.data.updated != null %}
-                <time datetime="{{ series.data.updated }}"> (updated {{ series.data.updated | readableDate }})</time>
+                <time datetime="{{ series.data.updated }}">(updated {{ series.data.updated | readableDate }})</time>
             {% endif %}
             
             <br>
             {{series.data.description}}
         </div>
     {% endfor %}
-</div>
+</section>
