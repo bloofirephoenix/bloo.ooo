@@ -9,11 +9,23 @@
   
     const nekoEl = document.createElement("div");
   
-    let nekoPosX = 32;
-    let nekoPosY = 32;
+    let nekoPosX = localStorage.getItem('nekoPosX');
+    if (nekoPosX == null) {
+      nekoPosX = 32;
+    }
+    let nekoPosY = localStorage.getItem('nekoPosY');
+    if (nekoPosX == null) {
+      nekoPosX = 32;
+    }
   
-    let mousePosX = 0;
-    let mousePosY = 0;
+    let mousePosX = localStorage.getItem('mousePosX');
+    if (mousePosX == null) {
+      mousePosX = nekoPosX;
+    }
+    let mousePosY = localStorage.getItem('mousePosY');
+    if (mousePosY == null) {
+      mousePosY = nekoPosY;
+    }
   
     let frameCount = 0;
     let idleTime = 0;
@@ -108,6 +120,8 @@
       document.addEventListener("mousemove", function (event) {
         mousePosX = event.clientX;
         mousePosY = event.clientY;
+        localStorage.setItem('mousePosX', mousePosX);
+        localStorage.setItem('mousePosY', mousePosY);
       });
   
       window.requestAnimationFrame(onAnimationFrame);
@@ -233,6 +247,11 @@
   
       nekoEl.style.left = `${nekoPosX - 16}px`;
       nekoEl.style.top = `${nekoPosY - 16}px`;
+
+      if (diffX != 0 || diffY != 0) {
+        localStorage.setItem('nekoPosX', nekoPosX);
+        localStorage.setItem('nekoPosY', nekoPosY);
+      }
     }
   
     init();

@@ -10,7 +10,7 @@ video {
 
 body {
 	max-width: 880px;
-	width: 80%;
+	width: 100%;
 	margin-left: auto;
 	font-size: 13pt;
 	margin-right: auto;
@@ -22,6 +22,12 @@ body {
 	image-rendering: pixelated;
 
 	background-color: var(--background-color);
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		width: 100%;
+	}
 }
 
 section {
