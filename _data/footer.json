@@ -14,5 +14,9 @@
     {
         "name": "Discord",
         "link": "https://discord.gg/SJfgKrD"
+    },
+    {
+        "name": "Atom Feed",
+        "link": "/feed.atom"
     }
 ]

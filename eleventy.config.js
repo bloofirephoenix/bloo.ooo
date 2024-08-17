@@ -94,7 +94,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
-	})
+	});
 
 	// Features to make your build faster (when you need them)
 

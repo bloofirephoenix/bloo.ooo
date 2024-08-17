@@ -14,5 +14,9 @@
     {
         "name": "Guest Book",
         "link": "/guestbook/"
+    },
+    {
+        "name": "Contact",
+        "link": "/contact/"
     }
 ]
